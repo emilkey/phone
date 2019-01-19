@@ -1,0 +1,4 @@
+runtime: python37
+entrypoint: gunicorn -b :$PORT phone:gunicorn_app
+env_variables:
+  PHONE_FORWARD_NUMBER: ''
