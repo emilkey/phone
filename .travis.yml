@@ -8,4 +8,5 @@ install:
 env:
   - PHONE_FORWARD_NUMBER="+12223334444"
 script:
+  - pylint phone/ --errors-only
   - pytest
