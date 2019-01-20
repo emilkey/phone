@@ -4,6 +4,7 @@ python:
 dist: xenial
 install:
   - pip install -r requirements.txt
+  - pip install .
 env:
   - PHONE_FORWARD_NUMBER="+12223334444"
 script:
