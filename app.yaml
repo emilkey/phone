@@ -7,3 +7,4 @@ handlers:
   script: auto
 env_variables:
   PHONE_FORWARD_NUMBER: ''
+  TWILIO_AUTH_TOKEN: ''
