@@ -1,0 +1,9 @@
+language: python
+python:
+  - "3.7"
+install:
+  - pip install -r requirements.txt
+env:
+  - PHONE_FORWARD_NUMBER="+12223334444"
+script:
+  - pytest
