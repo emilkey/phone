@@ -7,6 +7,7 @@ install:
   - pip install .
 env:
   - PHONE_FORWARD_NUMBER="+12223334444"
+  - TWILIO_AUTH_TOKEN="1111000022223333ffff00001111aacc"
 script:
   - pylint phone/ --errors-only
   - pytest
