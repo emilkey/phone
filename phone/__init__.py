@@ -1,6 +1,7 @@
 import os
 
-from flask import Flask
+from flask import Flask, request
+from twilio.request_validator import RequestValidator
 
 
 def create_app(test_config=None):
@@ -34,6 +35,12 @@ def create_app(test_config=None):
     app.register_blueprint(conference.bp)
 
     return app
+
+
+def validate_request() -> bool:
+    validator = RequestValidator(os.environ['TWILIO_AUTH_TOKEN'])
+    twilio_signature = request.headers.get('X-TWILIO-SIGNATURE', '')
+    return validator.validate(request.url, request.form, twilio_signature)
 
 
 if __name__ == '__main__':
