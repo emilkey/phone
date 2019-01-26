@@ -6,5 +6,9 @@ handlers:
   redirect_http_response_code: 301
   script: auto
 env_variables:
+  FLASK_ENV: production
   PHONE_FORWARD_NUMBER: ''
+  PHONE_CONF_ROOM_NUMBER: 1234
+  PHONE_CONF_LEADER_PIN: 9876
+  PHONE_CONF_PARTICIPANT_PIN: 4567
   TWILIO_AUTH_TOKEN: ''
